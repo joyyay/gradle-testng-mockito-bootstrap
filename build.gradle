@@ -56,7 +56,7 @@ test {
     useTestNG()
 
     options {
-        listeners << 'org.testng.reporters.JUnitXMLReporter'
+        listeners << 'org.testng.reporters.XMLReporter'
     }
 }
 
