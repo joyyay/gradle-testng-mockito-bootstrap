@@ -53,21 +53,11 @@ sourceSets {
 }
 
 test {
-    useTestNG() {
-        suiteXmlBuilder().suite(name: 'gradle-testng-mockito-bootstrap', parallel: 'tests') {
-            test (name : 'all-tests') {
-                packages {
-                    'package' (name: 'com.miguno.*')
-                }
-            }
-        }
-    }
+    useTestNG()
+
     options {
-        listeners << 'org.uncommons.reportng.HTMLReporter'
-        listeners << 'org.uncommons.reportng.JUnitXMLReporter'
+        listeners << 'org.testng.reporters.JUnitXMLReporter'
     }
-    ext.useDefaultListeners = true
-    ext.workingDirectory = 'build/'
 }
 
 // see https://github.com/Mapvine/gradle-cobertura-plugin
