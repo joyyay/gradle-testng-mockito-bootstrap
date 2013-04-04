@@ -76,4 +76,12 @@ public class BobRossTest {
         // then
         assertThat(paintingElements).contains("happy tree");
     }
+
+    /**
+     * Test main method.
+     */
+    @Test
+    public void testMain() {
+        BobRoss.main(new String[]{});
+    }
 }
